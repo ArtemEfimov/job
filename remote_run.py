@@ -92,7 +92,7 @@ def copy_output(filenames: list):
 def main():
     """Main function starts all processes"""
     client = ScrapinghubClient(apikey)  # if your API key here then remove "from keys import apikey" string above
-    project = client.get_project('yuor_id')  # project ID grab from scrapinghub
+    project = client.get_project('your_id')  # project ID grab from scrapinghub
     ids = [spider['id'] for spider in project.spiders.list()]  # ['inco', 'ingra', 'quintecdistribucion', 'tec']
     logger.info(f'{ids}')
 
